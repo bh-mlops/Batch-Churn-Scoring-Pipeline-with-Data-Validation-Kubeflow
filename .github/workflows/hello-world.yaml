@@ -12,4 +12,4 @@ jobs:
       - name: Install Dependencies
         run: |
               ls -al
-              python3 --version
+              python3 kfp-hello-world/hello_world.py
