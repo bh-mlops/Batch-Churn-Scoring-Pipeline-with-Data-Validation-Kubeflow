@@ -11,4 +11,5 @@ jobs:
       # setup python environment since running on self-hosted mode
       - name: Install Dependencies
         run: |
+              ls -al
               python3 --version
