@@ -10,7 +10,7 @@ setup:
 	$(PIP) install -r kfp-hello-world/requirements.txt
 
 compile-kfp:
-	$(PYTHON) kfp-hello-world/hello_world.py
+	kfp dsl compile --py kfp-hello-world/hello_world.py --output my_pipeline.yaml
 # Run tests using the venv python
 test:
 	$(PYTHON) -m pytest tests/
