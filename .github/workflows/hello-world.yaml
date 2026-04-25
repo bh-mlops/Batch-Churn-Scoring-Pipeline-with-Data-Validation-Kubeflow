@@ -11,5 +11,8 @@ jobs:
       # setup python environment since running on self-hosted mode
       - name: Install Dependencies
         run: |
-              ls -al
-              python3 kfp-hello-world/hello_world.py
+              make setup
+      
+      - name: Compile KFP
+        run: |
+              make compile-kfp
