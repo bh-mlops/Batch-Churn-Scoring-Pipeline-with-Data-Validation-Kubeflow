@@ -16,3 +16,7 @@ jobs:
       - name: Compile KFP
         run: |
               make compile-kfp
+      
+      - name: Clean Environment
+        run: |
+              make clean
