@@ -13,6 +13,8 @@ setup:
 compile-kfp:
 	source $(VENV)/bin/activate && kfp dsl compile --py kfp-hello-world/hello_world.py --output my_pipeline.yaml
 
+push-to-kubeflow:
+	source $(VENV)/bin/activate && kfp pipeline upload -p hello-world-pipeline my_pipeline.yaml --endpoint http://localhost:8888
 # Run tests using the venv python
 test:
 	$(PYTHON) -m pytest tests/
