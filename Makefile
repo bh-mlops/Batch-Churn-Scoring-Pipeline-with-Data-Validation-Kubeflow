@@ -1,6 +1,7 @@
 VENV = venv
 PYTHON = $(VENV)/bin/python3
 PIP = $(VENV)/bin/pip
+KFP = $(VENV)/lib/python3.14/site-packages/kfp
 
 PIPELINE_PATH = kfp-hello-world
 
@@ -11,7 +12,7 @@ setup:
 
 compile-kfp:
 	$(PIP) install kfp
-	kfp dsl compile --py kfp-hello-world/hello_world.py --output my_pipeline.yaml
+	$(KFP) dsl compile --py kfp-hello-world/hello_world.py --output my_pipeline.yaml
 
 # Run tests using the venv python
 test:
