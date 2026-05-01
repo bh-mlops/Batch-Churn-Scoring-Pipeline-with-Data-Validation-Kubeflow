@@ -11,8 +11,7 @@ setup:
 	$(PIP) install -r kfp-hello-world/requirements.txt
 
 compile-kfp:
-	$(PIP) install kfp
-	$(KFP) dsl compile --py kfp-hello-world/hello_world.py --output my_pipeline.yaml
+	source $(VENV)/bin/activate && kfp dsl compile --py kfp-hello-world/hello_world.py --output my_pipeline.yaml
 
 # Run tests using the venv python
 test:
