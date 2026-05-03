@@ -419,3 +419,4 @@ FodyWeavers.xsd
 *.msm
 *.msp
 pipeline.yaml
+kubeflow-env.sh
